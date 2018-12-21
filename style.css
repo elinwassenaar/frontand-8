@@ -27,8 +27,8 @@ a {
 strong {
     color: lightgrey;
     text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bolder;
+    font-size: .8em;
+    font-weight: bold;
 }
 
 .header {
@@ -65,9 +65,14 @@ strong {
     "code";
 }
 
+    .main h3 {
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
 
 .block {
-    padding: 1em;
+    padding: 2em;
     display: flex;
 }
 
@@ -88,6 +93,7 @@ strong {
 
 .featured {
     grid-area: featured;
+    background: white;
 }
 
 
@@ -96,6 +102,36 @@ strong {
     background: white;
 }
 
+    .top-stories ol {
+        color: lightgrey;
+        
+    }
+
+.special-edition {
+
+}
+
+    .special-edition h3{
+        color: white;
+        text-transform: none;
+        font-size: 1.5em;
+    }
+
+    .special-edition p{
+        color: white;
+    }
+    
+.most-recent {
+    grid-area: most-recent;
+    background: white;
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1.5em;
+}
 
 .footer {
     display: flex;
