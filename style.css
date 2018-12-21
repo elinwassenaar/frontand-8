@@ -11,23 +11,12 @@ MAAK ALLES ZO FLEXIBEL MOGELIJK*/
 
 
 body {
-    font-family: Arial;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
     background: lightgrey;
     margin: 0em;
     padding: 0em;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: /*8*/ repeat (8, 1fr);
-    grid-gap: 10em;
-    grid-template-areas:
-    "header"
-    "websites"
-    "featured"
-    "top-stories"
-    "special-edition"
-    "most-recent"
-    "code"
-    "footer"
 }
 
 a {
@@ -35,10 +24,21 @@ a {
     color: black;
 }
 
+strong {
+    color: lightgrey;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
 .header {
+    grid-area: header;
     display: flex;
     flex-direction: column;
     background: white;
+    /* position: fixed; */
+    width: 100vw;
+    /* opacity: 1; */
     box-shadow: .1em .1em 1em grey;
     align-items: center;
 }
@@ -50,7 +50,60 @@ a {
         grid-gap: 2em;
     }
 
-main {
+.main {
     margin: 1em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(480px, auto) repeat(5, 1fr);
+    grid-template-areas:
+    "websites"
+    "featured"
+    "top-stories"
+    "special-edition"
+    "most-recent"
+    "code";
 }
 
+
+.block {
+    padding: 1em;
+    display: flex;
+}
+
+.hero-content {
+    grid-area: websites;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+    .hero-content h1{
+        color: white;
+    }
+
+    .hero-content p{
+        color: white;
+    }
+
+.featured {
+    grid-area: featured;
+}
+
+
+.top-stories {
+    grid-area: top-stories;
+    background: white;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer strong{
+    color: black;
+    text-transform: unset;
+    font-size: 1em;
+}
