@@ -1,0 +1,56 @@
+/* 3 rijen, header, main, footer
+3 kolommen, zijruimte, main, zijruimte
+Beginnen vanaf mobile opbouwen
+Let ook op hoe tekst verspringt bij breder/smaller maken van scherm
+Eén mediaquery op 50em 
+MAAK ALLES ZO FLEXIBEL MOGELIJK*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial;
+    background: lightgrey;
+    margin: 0em;
+    padding: 0em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: /*8*/ repeat (8, 1fr);
+    grid-gap: 10em;
+    grid-template-areas:
+    "header"
+    "websites"
+    "featured"
+    "top-stories"
+    "special-edition"
+    "most-recent"
+    "code"
+    "footer"
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: .1em .1em 1em grey;
+    align-items: center;
+}
+
+    .header ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2em;
+    }
+
+main {
+    margin: 1em;
+}
+
