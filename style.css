@@ -55,11 +55,11 @@ p {
     }
 
 .main {
-    margin: 1em;
+    padding: 1em;
     display: grid;
     grid-gap: 1em;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(480px, auto) repeat(5, 1fr);
+    grid-template-rows: minmax(480px, auto) repeat(2, auto) minmax(300px, auto) auto minmax(250px, auto);
     grid-template-areas:
     "websites"
     "featured"
@@ -77,6 +77,7 @@ p {
 
 .block {
     padding: 2em;
+    height: ;
     display: flex;
 }
 
